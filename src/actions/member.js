@@ -118,7 +118,7 @@ export function updateProfile(formData) {
   * Logout
   */
 export function logout() {
-  return dispatch => new Promise((resolve, reject) => {
+  return dispatch => new Promise((resolve) => {
     resolve();
   }).catch(async (err) => { await statusMessage(dispatch, 'error', err.message); throw err.message; });
 }

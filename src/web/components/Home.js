@@ -7,7 +7,7 @@ const About = () => (
       <Jumbotron className="bg-primary text-white">
         <h1>Web & Mobile App Starter Kit</h1>
         <p className="lead">For when you're looking to build 'the next big thing', but don't want to start from scratch.</p>
-        <p>This App Starter Kit is built for those who need both a web app + mobile app, and don't want to write and maintain two different code bases. The project shares the 'business logic' and allows flexibility in View components to ensure your project looks and feels native in each platform.</p>
+        <p>This App Starter Kit is built for those who need both a web app + mobile </p>
       </Jumbotron>
     </Row>
     <Row className="pt-5">
@@ -33,7 +33,7 @@ const About = () => (
     <Row className="pt-md-5 pb-5">
       <Col xs="12" md="4" className="pt-3 pt-md-0">
         <h3><i className="icon-layers" /> Redux Persist</h3>
-        <p>Persist the data stored in Redux for faster load times without needing to hit the server each page load.</p>
+        <p>Persist the data stored in Redux for faster load times.</p>
         <p>
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/rt2zz/redux-persist" className="btn btn-primary">
             Redux Persist Docs
@@ -53,7 +53,7 @@ const About = () => (
     <hr />
     <Row className="pt-5">
       <Col xs="5" sm="3" lg="2" className="offset-lg-2">
-        <img className="img-fluid rounded-circle" src="https://avatars0.githubusercontent.com/u/1809236?s=460&v=4" />
+        <img className="img-fluid rounded-circle" src="https://avatars0.githubusercontent.com/u/1809236?s=460&v=4" alt="img" />
       </Col>
       <Col xs="12" sm="9" lg="5" className="pt-4 pt-sm-0">
         <h3>I can help</h3>
