@@ -32,7 +32,7 @@ export function replaceFavourites(newFavourites) {
   */
 export function getMeals() {
   return () => new Promise(resolve => resolve());
-};
+}
 
 /**
   * Set an Error Message

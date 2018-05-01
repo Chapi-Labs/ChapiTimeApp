@@ -1,9 +1,6 @@
 import ErrorMessages from '../constants/errors';
 import statusMessage from './status';
 
-/**
-  * 
-  */
 export function signUp(formData) {
   const {
     email,
@@ -41,7 +38,7 @@ function getUserData(dispatch) {
 
 export function getMemberData() {
   return () => new Promise(resolve => resolve());
-};
+}
 
 /**
   * Login
@@ -80,7 +77,7 @@ export function resetPassword(formData) {
 
     await statusMessage(dispatch, 'loading', true);
 
-    return {}
+    return {};
   }).catch(async (err) => { await statusMessage(dispatch, 'error', err.message); throw err.message; });
 }
 
@@ -99,7 +96,6 @@ export function updateProfile(formData) {
   } = formData;
 
   return dispatch => new Promise(async (resolve, reject) => {
-  
     // Validation checks
     if (!firstName) return reject({ message: ErrorMessages.missingFirstName });
     if (!lastName) return reject({ message: ErrorMessages.missingLastName });
