@@ -82,12 +82,12 @@ export default (variables = variable) => {
     },
     '.first': {
       '.itemHeader': {
-        paddingTop: variables.listItemPadding + 3
-      }
+        paddingTop: variables.listItemPadding + 3,
+      },
     },
     '.itemHeader': {
       '.first': {
-        paddingTop: variables.listItemPadding + 3
+        paddingTop: variables.listItemPadding + 3,
       },
       borderBottomWidth: platform === 'ios' ? variables.borderWidth : null,
       marginLeft: null,
@@ -102,7 +102,7 @@ export default (variables = variable) => {
       'NativeBase.Text': {
         fontSize: 14,
         color: platform === 'ios' ? undefined : variables.listNoteColor,
-      }
+      },
     },
     '.itemDivider': {
       borderBottomWidth: null,
@@ -157,7 +157,7 @@ export default (variables = variable) => {
         '.note': {
           color: variables.listNoteColor,
           fontWeight: '200',
-        }
+        },
       },
       alignSelf: null,
       alignItems: null,
@@ -171,16 +171,16 @@ export default (variables = variable) => {
           marginRight: -15,
           'NativeBase.Text': {
             color: variables.topTabBarActiveTextColor,
-          }
-        }
+          },
+        },
       },
       'NativeBase.Button': {
         alignSelf: null,
         '.transparent': {
           'NativeBase.Text': {
             color: variables.topTabBarActiveTextColor,
-          }
-        }
+          },
+        },
       },
       'NativeBase.Icon': {
         alignSelf: null,
@@ -233,7 +233,7 @@ export default (variables = variable) => {
 
     '.avatar': {
       'NativeBase.Left': {
-        flex: 0
+        flex: 0,
       },
       'NativeBase.Body': {
         'NativeBase.Text': {
@@ -243,13 +243,13 @@ export default (variables = variable) => {
         paddingVertical: variables.listItemPadding,
         borderBottomWidth: variables.borderWidth,
         borderColor: variables.listBorderColor,
-        marginLeft: variables.listItemPadding + 5
+        marginLeft: variables.listItemPadding + 5,
       },
       'NativeBase.Right': {
         'NativeBase.Text': {
           '.note': {
-            fontSize: variables.noteFontSize - 2
-          }
+            fontSize: variables.noteFontSize - 2,
+          },
         },
         flex: 0,
         paddingRight: variables.listItemPadding + 5,
@@ -265,17 +265,17 @@ export default (variables = variable) => {
 
     '.thumbnail': {
       'NativeBase.Left': {
-        flex: 0
+        flex: 0,
       },
       'NativeBase.Body': {
         'NativeBase.Text': {
-          marginLeft: null
+          marginLeft: null,
         },
         flex: 1,
         paddingVertical: variables.listItemPadding + 5,
         borderBottomWidth: variables.borderWidth,
         borderColor: variables.listBorderColor,
-        marginLeft: variables.listItemPadding + 5
+        marginLeft: variables.listItemPadding + 5,
       },
       'NativeBase.Right': {
         'NativeBase.Button': {
@@ -283,7 +283,7 @@ export default (variables = variable) => {
             'NativeBase.Text': {
               fontSize: variables.listNoteSize,
               color: variables.sTabBarActiveTextColor,
-            }
+            },
           },
           height: null,
         },
@@ -380,7 +380,7 @@ export default (variables = variable) => {
           alignSelf: null,
         },
         'NativeBase.PickerNB': {
-          ...pickerTheme()
+          ...pickerTheme(),
         },
         flexDirection: 'row',
         alignItems: 'center',
@@ -390,7 +390,7 @@ export default (variables = variable) => {
         justifyContent: 'flex-end',
         borderBottomWidth: 1 / PixelRatio.getPixelSizeForLayoutSize(1),
         borderColor: variables.listBorderColor,
-        paddingRight: variables.listItemPadding + 5
+        paddingRight: variables.listItemPadding + 5,
       },
       borderBottomWidth: null,
       paddingVertical: null,
@@ -399,7 +399,7 @@ export default (variables = variable) => {
       justifyContent: 'center',
     },
     '.noBorder': {
-      borderBottomWidth: null
+      borderBottomWidth: null,
     },
     alignItems: 'center',
     flexDirection: 'row',
