@@ -35,7 +35,7 @@ const Profile = ({ member, logout }) => (
               </Body>
             </ListItem>
           </View>
-        :
+          :
           <View>
             <Content padder>
               <Header
