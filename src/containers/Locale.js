@@ -1,50 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import changeLocale from '../actions/locale';
 
-import { login } from '../actions/member';
-
-const Login = ({
+const Locale = ({
   Layout,
-  onFormSubmit,
-  member,
   locale,
   isLoading,
-  infoMessage,
   errorMessage,
-  successMessage,
+  onChangeLocale,
 }) => (
   <Layout
-    member={member}
     locale={locale}
     loading={isLoading}
-    info={infoMessage}
     error={errorMessage}
-    success={successMessage}
-    onFormSubmit={onFormSubmit}
+    onChangeLocale={onChangeLocale}
   />
 );
 
-Login.propTypes = {
+Locale.propTypes = {
   Layout: PropTypes.func.isRequired,
   locale: PropTypes.string,
-  member: PropTypes.shape({}).isRequired,
-  onFormSubmit: PropTypes.func.isRequired,
+  onChangeLocale: PropTypes.func.isRequired,
   isLoading: PropTypes.bool.isRequired,
-  infoMessage: PropTypes.string,
   errorMessage: PropTypes.string,
-  successMessage: PropTypes.string,
 };
 
-Login.defaultProps = {
-  infoMessage: null,
-  locale: null,
+Locale.defaultProps = {
   errorMessage: null,
-  successMessage: null,
+  locale: null,
 };
 
 const mapStateToProps = state => ({
-  member: state.member || {},
   locale: state.locale || null,
   isLoading: state.status.loading || false,
   infoMessage: state.status.info || null,
@@ -53,7 +40,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  onFormSubmit: login,
+  onChangeLocale: changeLocale,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Locale);

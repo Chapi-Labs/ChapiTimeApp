@@ -1,6 +1,6 @@
 {
   "expo": {
-    "sdkVersion": "22.0.0",
+    "sdkVersion": "26.0.0",
     "name": "ChapiTime",
     "slug": "chapi-time",
     "icon": "src/images/app-icon.png",

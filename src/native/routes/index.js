@@ -18,6 +18,9 @@ import LoginComponent from '../components/Login';
 import ForgotPasswordContainer from '../../containers/ForgotPassword';
 import ForgotPasswordComponent from '../components/ForgotPassword';
 
+import LocaleContainer from '../../containers/Locale';
+import LocaleComponent from '../components/Locale';
+
 import UpdateProfileContainer from '../../containers/UpdateProfile';
 import UpdateProfileComponent from '../components/UpdateProfile';
 
@@ -52,11 +55,7 @@ const Index = (
           icon={() => <Icon name="book" {...DefaultProps.icons} />}
           {...DefaultProps.navbarProps}
         >
-          <Scene
-            key="recipes"
-            component={RecipesContainer}
-            Layout={RecipesComponent}
-          />
+          <Scene key="recipes" component={RecipesContainer} Layout={RecipesComponent} />
         </Stack>
 
         <Stack
@@ -65,11 +64,7 @@ const Index = (
           icon={() => <Icon name="contact" {...DefaultProps.icons} />}
           {...DefaultProps.navbarProps}
         >
-          <Scene
-            key="profileHome"
-            component={MemberContainer}
-            Layout={ProfileComponent}
-          />
+          <Scene key="profileHome" component={MemberContainer} Layout={ProfileComponent} />
           <Scene
             back
             key="signUp"
@@ -93,6 +88,14 @@ const Index = (
             {...DefaultProps.navbarProps}
             component={ForgotPasswordContainer}
             Layout={ForgotPasswordComponent}
+          />
+          <Scene
+            back
+            key="locale"
+            title="CHANGE LANGUAGE"
+            {...DefaultProps.navbarProps}
+            component={LocaleContainer}
+            Layout={LocaleComponent}
           />
           <Scene
             back
