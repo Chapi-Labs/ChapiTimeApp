@@ -27,8 +27,8 @@ export default (variables = variable) => {
           '.note': {
             color: variables.listNoteColor,
             fontWeight: '400',
-            marginRight: 20
-          }
+            marginRight: 20,
+          },
         },
         flex: 1,
         marginLeft: 10,
@@ -48,7 +48,7 @@ export default (variables = variable) => {
         '.transparent': {
           ...transparentBtnCommon,
           paddingRight: variables.listItemPadding + 5,
-        }
+        },
       },
       flex: 1,
       flexDirection: 'row',
@@ -59,13 +59,13 @@ export default (variables = variable) => {
       'NativeBase.Text': {
         color: platform === 'ios' ? '#555' : '#222',
         fontSize: variables.DefaultFontSize - 3,
-      }
+      },
     },
     '.cardBody': {
       padding: -5,
       'NativeBase.Text': {
         marginTop: 5,
-      }
+      },
     },
     'NativeBase.Body': {
       'NativeBase.Text': {
@@ -73,7 +73,7 @@ export default (variables = variable) => {
           color: variables.listNoteColor,
           fontWeight: '200',
           marginRight: 20,
-        }
+        },
       },
       'NativeBase.Button': {
         '.transparent': {
@@ -135,12 +135,12 @@ export default (variables = variable) => {
       '.bordered': {
         'NativeBase.Text': {
           color: variables.brandPrimary,
-          fontWeight: platform === 'ios' ? '600' : '500'
+          fontWeight: platform === 'ios' ? '600' : '500',
         },
         borderBottomWidth: platform === 'ios' ? variables.borderWidth : null,
       },
       borderBottomWidth: null,
-      paddingVertical: variables.listItemPadding + 5
+      paddingVertical: variables.listItemPadding + 5,
     },
     '.footer': {
       'NativeBase.Text': {
@@ -160,7 +160,7 @@ export default (variables = variable) => {
       '.note': {
         color: variables.listNoteColor,
         fontWeight: '200',
-      }
+      },
     },
 
     'NativeBase.Icon': {
