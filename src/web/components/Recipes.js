@@ -36,7 +36,7 @@ const RecipeListing = ({ error, loading, recipes }) => {
       <Row>
         <Col sm="12">
           <h1>Recipes</h1>
-          <p>The following data is read directly from Firebase.</p>
+          <p>The following data</p>
         </Col>
       </Row>
       <Row className={loading ? 'content-loading' : ''}>

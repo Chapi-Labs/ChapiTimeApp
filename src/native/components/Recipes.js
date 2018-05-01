@@ -29,7 +29,7 @@ const RecipeListing = ({
       <Content padder>
         <Header
           title="Top Recipes"
-          content="This is here to show how you can read and display data from a data source (in our case, Firebase)."
+          content="This is here to show how you can read and display data from a data source."
         />
 
         <FlatList
