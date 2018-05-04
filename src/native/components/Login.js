@@ -63,9 +63,6 @@ class Login extends React.Component {
           <Image source={{uri: '../../images/ChapiTime.png'}} />
           
           <Card>
-            <CardItem header>
-              <Text>Ingresa para iniciar sesión</Text>
-            </CardItem>
             <Form>
               <Item stackedLabel>
                 <Label>Usuario o Correo</Label>
