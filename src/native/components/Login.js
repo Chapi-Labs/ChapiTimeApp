@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container, Content, Form, Item, Label, Input, Text, Button } from 'native-base';
+import { Image } from 'react-native';
+import { Container, Content, Form, Item, Label, Input, Text, Button, Card, CardItem } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 import Loading from './Loading';
 import Messages from './Messages';
@@ -57,41 +58,53 @@ class Login extends React.Component {
     return (
       <Container>
         <Content padder>
-          <Header
-            title="Welcome back"
-            content="Please use your email and password to login."
-          />
-
           {error && <Messages message={error} />}
 
-          <Form>
-            <Item stackedLabel>
-              <Label>{translate('Email', locale)}</Label>
-              <Input
-                autoCapitalize="none"
-                value={this.state.email}
-                keyboardType="email-address"
-                onChangeText={v => this.handleChange('email', v)}
-              />
-            </Item>
-            <Item stackedLabel>
-              <Label>{translate('Password', locale)}</Label>
-              <Input
-                secureTextEntry
-                onChangeText={v => this.handleChange('password', v)}
-              />
-            </Item>
+          <Image source={{uri: '../../images/ChapiTime.png'}} />
+          
+          <Card>
+            <CardItem header>
+              <Text>Ingresa para iniciar sesión</Text>
+            </CardItem>
+            <Form>
+              <Item stackedLabel>
+                <Label>Usuario o Correo</Label>
+                <Input
+                  autoCapitalize="none"
+                  value={this.state.email}
+                  keyboardType="email-address"
+                  onChangeText={v => this.handleChange('email', v)}
+                />
+                
+              </Item>
+              <Item stackedLabel>
+                <Label>Contraseña</Label>
+                <Input
+                  secureTextEntry
+                  onChangeText={v => this.handleChange('password', v)}
+                />
+              </Item>
 
-            <Spacer size={20} />
+              <Spacer size={20} />
 
-            <Button block onPress={this.handleSubmit}>
-              <Text>{translate('Login', locale)}</Text>
+              <Button block onPress={this.handleSubmit}>
+                <Text>Iniciar</Text>
+              </Button>
+            </Form>
+
+            <Spacer size={10} />
+            
+            <Button block bordered dark onPress={Actions.forgotPassword}>
+              <Text>
+                Olvidé contraseña
+              </Text>
             </Button>
-          </Form>
+          </Card>
         </Content>
       </Container>
     );
   }
 }
+
 
 export default Login;
