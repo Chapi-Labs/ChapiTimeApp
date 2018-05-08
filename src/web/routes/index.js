@@ -13,7 +13,7 @@ import RecipesComponent from '../components/Recipes';
 import RecipeViewComponent from '../components/Recipe';
 
 import SignUpContainer from '../../containers/SignUp';
-import SignUpComponent from '../components/SignUp';
+import RegistroHorasComponent from '../components/RegistroHoras';
 
 import LoginContainer from '../../containers/Login';
 import LoginComponent from '../components/Login';
@@ -41,7 +41,7 @@ const Index = () => (
       path="/sign-up"
       render={props => (
         <TemplateNothing>
-          <SignUpContainer {...props} Layout={SignUpComponent} />
+          <SignUpContainer {...props} Layout={RegistroHorasComponent} />
         </TemplateNothing>
       )}
     />

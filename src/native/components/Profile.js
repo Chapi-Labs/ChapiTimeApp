@@ -57,7 +57,7 @@ const Profile = ({ member, logout }) => (
                 <Icon name="add-circle" />
               </Left>
               <Body>
-                <Text>Sign Up</Text>
+                <Text>Ingresar horas</Text>
               </Body>
             </ListItem>
             <ListItem onPress={Actions.forgotPassword} icon>

@@ -10,7 +10,7 @@ import RecipesComponent from '../components/Recipes';
 import RecipeViewComponent from '../components/Recipe';
 
 import SignUpContainer from '../../containers/SignUp';
-import SignUpComponent from '../components/SignUp';
+import RegistroHorasComponent from '../components/RegistroHoras';
 
 import LoginContainer from '../../containers/Login';
 import LoginComponent from '../components/Login';
@@ -71,7 +71,7 @@ const Index = (
             title="SIGN UP"
             {...DefaultProps.navbarProps}
             component={SignUpContainer}
-            Layout={SignUpComponent}
+            Layout={RegistroHorasComponent}
           />
           <Scene
             back
