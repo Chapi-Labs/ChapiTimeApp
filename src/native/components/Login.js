@@ -8,6 +8,7 @@ import Messages from './Messages';
 import { translate } from '../../i18n';
 import Header from './Header';
 import Spacer from './Spacer';
+var firstImage = require('../../images/ChapiTime.png');
 
 class Login extends React.Component {
   static propTypes = {
@@ -60,7 +61,7 @@ class Login extends React.Component {
         <Content padder>
           {error && <Messages message={error} />}
 
-          <Image source={{uri: '../../images/ChapiTime.png'}} />
+          <Image source={firstImage} style={{height: 200, width: null}}/>
           
           <Card>
             <Form>
