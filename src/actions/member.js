@@ -1,23 +1,8 @@
 import ErrorMessages from '../constants/errors';
 import statusMessage from './status';
 
-export function signUp(formData) {
-  const {
-    email,
-    password,
-    password2,
-    firstName,
-    lastName,
-  } = formData;
-
+export function registroHoras(formData) {
   return dispatch => new Promise(async (resolve, reject) => {
-    // Validation checks
-    if (!firstName) return reject({ message: ErrorMessages.missingFirstName });
-    if (!lastName) return reject({ message: ErrorMessages.missingLastName });
-    if (!email) return reject({ message: ErrorMessages.missingEmail });
-    if (!password) return reject({ message: ErrorMessages.missingPassword });
-    if (!password2) return reject({ message: ErrorMessages.missingPassword });
-    if (password !== password2) return reject({ message: ErrorMessages.passwordsDontMatch });
 
     await statusMessage(dispatch, 'loading', true);
 

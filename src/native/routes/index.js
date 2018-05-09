@@ -9,7 +9,7 @@ import RecipesContainer from '../../containers/Recipes';
 import RecipesComponent from '../components/Recipes';
 import RecipeViewComponent from '../components/Recipe';
 
-import SignUpContainer from '../../containers/SignUp';
+import RegistroHorasContainer from '../../containers/RegistroHoras';
 import RegistroHorasComponent from '../components/RegistroHoras';
 
 import LoginContainer from '../../containers/Login';
@@ -67,10 +67,10 @@ const Index = (
           <Scene key="profileHome" component={MemberContainer} Layout={ProfileComponent} />
           <Scene
             back
-            key="signUp"
-            title="SIGN UP"
+            key="registroHoras"
+            title="REGISTRO HORAS"
             {...DefaultProps.navbarProps}
-            component={SignUpContainer}
+            component={RegistroHorasContainer}
             Layout={RegistroHorasComponent}
           />
           <Scene

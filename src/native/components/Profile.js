@@ -52,7 +52,7 @@ const Profile = ({ member, logout }) => (
                 <Text>Login</Text>
               </Body>
             </ListItem>
-            <ListItem onPress={Actions.signUp} icon>
+            <ListItem onPress={Actions.registroHoras} icon>
               <Left>
                 <Icon name="add-circle" />
               </Left>

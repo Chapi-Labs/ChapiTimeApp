@@ -79,11 +79,12 @@ class RegistroHoras extends React.Component {
 
             <Spacer size={10} />
 
+            <Label>Fecha de las horas invertidas</Label>
             <DatePicker
               style={{width: 250}}
               date={this.state.fecha}
               mode="date"
-              placeholder="Fecha de las horas invertidas"
+              placeholder="YYYY-MM-DD"
               format="YYYY-MM-DD"
               confirmBtnText="Confirm"
               cancelBtnText="Cancel"
@@ -112,16 +113,15 @@ class RegistroHoras extends React.Component {
             </Picker>
 
             <Spacer size={10} />
-            
-            <Item stackedLabel>
-              <Label>Registro de actividad y horas</Label>
-              <Button transparent success>
-              <Icon name="add-circle" /><Text>Agregar Actividad</Text>
-              </Button>
-            </Item>
+
+            <Label>Registro de actividad y horas</Label>
+            <Button transparent success>
+            <Icon name="add-circle" /><Text>Agregar Actividad</Text>
+            </Button>
 
             <Spacer size={10} />
 
+            <Label>Horas realizadas por</Label>
             <Picker
               mode="dropdown"
               iosIcon={<Icon name="ios-arrow-down-outline" />}
