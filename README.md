@@ -9,6 +9,8 @@
 
 ---
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Chapi-Labs/ChapiTimeApp.svg)](https://greenkeeper.io/)
+
 [![CryptoTip](https://img.shields.io/badge/Donate%20with-CryptoTip-blue.svg?style=flat&colorB=007bff)](https://cryptotip.it/p/mcnamee)  [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=U7CE3LJYX859E)
 
 # React (Web + Native) Starter Kit
