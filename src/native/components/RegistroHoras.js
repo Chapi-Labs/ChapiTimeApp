@@ -7,6 +7,7 @@ import Loading from './Loading';
 import Messages from './Messages';
 import Header from './Header';
 import Spacer from './Spacer';
+import Activity from './Activity';
 
 class RegistroHoras extends React.Component {
   static propTypes = {
@@ -31,17 +32,23 @@ class RegistroHoras extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleNewActivity = this.handleNewActivity.bind(this);
   }
 
   handleChange = (name, val) => {
     this.setState({
       ...this.state,
       [name]: val,
+      numChildren: 0,
     });
   }
 
   handleSubmit = () => {
     
+  }
+
+  handleNewActivity = () => {
+    console.log("Hola");
   }
 
   render() {
@@ -115,8 +122,9 @@ class RegistroHoras extends React.Component {
             <Spacer size={10} />
 
             <Label>Registro de actividad y horas</Label>
-            <Button transparent success>
-            <Icon name="add-circle" /><Text>Agregar Actividad</Text>
+            <Activity />
+            <Button transparent success onClick={this.handleNewActivity}>
+              <Icon name="add-circle" /><Text>Agregar Actividad</Text>
             </Button>
 
             <Spacer size={10} />
