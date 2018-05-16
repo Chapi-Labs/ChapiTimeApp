@@ -49,4 +49,4 @@ export function setError(message) {
   */
 export function getRecipes() {
   return () => new Promise(resolve => resolve());
-};
+}
