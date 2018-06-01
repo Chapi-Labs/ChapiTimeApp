@@ -39,8 +39,8 @@ const Profile = ({ member, logout }) => (
           <View>
             <Content padder>
               <Header
-                title="Hi there,"
-                content="Please login to gain extra access"
+                title="Bienvenido"
+                content="Moore Stephens Díaz Reyes"
               />
             </Content>
 
@@ -65,19 +65,11 @@ const Profile = ({ member, logout }) => (
                 <Icon name="help-buoy" />
               </Left>
               <Body>
-                <Text>Forgot Password</Text>
+                <Text>Olvidé Contraseña</Text>
               </Body>
             </ListItem>
           </View>
         }
-        <ListItem onPress={Actions.locale} icon>
-          <Left>
-            <Icon name="ios-flag" />
-          </Left>
-          <Body>
-            <Text>Change Language</Text>
-          </Body>
-        </ListItem>
       </List>
     </Content>
   </Container>
