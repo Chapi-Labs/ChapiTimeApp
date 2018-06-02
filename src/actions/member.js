@@ -3,9 +3,7 @@ import statusMessage from './status';
 
 export function registroHoras(formData) {
   return dispatch => new Promise(async (resolve, reject) => {
-
     await statusMessage(dispatch, 'loading', true);
-
     return {};
   }).catch(async (err) => { await statusMessage(dispatch, 'error', err.message); throw err.message; });
 }
