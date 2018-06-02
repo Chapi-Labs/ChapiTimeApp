@@ -10,9 +10,9 @@ export default function userReducer(state = initialState, action) {
           ...state,
           loading: false,
           error: null,
-          uid: action.data.uid,
+          jwt: action.data.jwt,
+          user: action.data.user,
           email: action.data.email,
-          emailVerified: action.data.emailVerified,
         };
       }
       return initialState;

@@ -39,8 +39,8 @@ const Profile = ({ member, logout }) => (
           <View>
             <Content padder>
               <Header
-                title="Hi there,"
-                content="Please login to gain extra access"
+                title="Bienvenido"
+                content="Moore Stephens Díaz Reyes"
               />
             </Content>
 
@@ -52,12 +52,12 @@ const Profile = ({ member, logout }) => (
                 <Text>Login</Text>
               </Body>
             </ListItem>
-            <ListItem onPress={Actions.signUp} icon>
+            <ListItem onPress={Actions.registroHoras} icon>
               <Left>
                 <Icon name="add-circle" />
               </Left>
               <Body>
-                <Text>Sign Up</Text>
+                <Text>Ingresar horas</Text>
               </Body>
             </ListItem>
             <ListItem onPress={Actions.forgotPassword} icon>
@@ -65,19 +65,11 @@ const Profile = ({ member, logout }) => (
                 <Icon name="help-buoy" />
               </Left>
               <Body>
-                <Text>Forgot Password</Text>
+                <Text>Olvidé Contraseña</Text>
               </Body>
             </ListItem>
           </View>
         }
-        <ListItem onPress={Actions.locale} icon>
-          <Left>
-            <Icon name="ios-flag" />
-          </Left>
-          <Body>
-            <Text>Change Language</Text>
-          </Body>
-        </ListItem>
       </List>
     </Content>
   </Container>

@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { signUp } from '../actions/member';
+import { registroHoras } from '../actions/member';
 
-const SignUp = ({
+const RegistroHoras = ({
   Layout,
   onFormSubmit,
   member,
@@ -23,7 +23,7 @@ const SignUp = ({
   />
 );
 
-SignUp.propTypes = {
+RegistroHoras.propTypes = {
   Layout: PropTypes.func.isRequired,
   member: PropTypes.shape({}).isRequired,
   onFormSubmit: PropTypes.func.isRequired,
@@ -33,7 +33,7 @@ SignUp.propTypes = {
   successMessage: PropTypes.string,
 };
 
-SignUp.defaultProps = {
+RegistroHoras.defaultProps = {
   infoMessage: null,
   errorMessage: null,
   successMessage: null,
@@ -48,7 +48,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  onFormSubmit: signUp,
+  onFormSubmit: registroHoras,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
+export default connect(mapStateToProps, mapDispatchToProps)(RegistroHoras);
