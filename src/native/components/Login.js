@@ -5,9 +5,7 @@ import { Container, Content, Form, Item, Label, Input, Text, Button, Card } from
 import { Actions } from 'react-native-router-flux';
 import Loading from './Loading';
 import Messages from './Messages';
-import Spacer from './Spacer';
-
-const logoImage = require('../../images/ChapiTime.png');
+import Spacer from './Spacer';;
 
 class Login extends React.Component {
   static propTypes = {
@@ -58,7 +56,10 @@ class Login extends React.Component {
         <Content padder>
           {error && <Messages message={error} />}
 
-          <Image source={logoImage} style={{ height: 200, width: null }} />
+          <Image
+            source={ require('../../images/ChapiTime.png') }
+            style={{ height: 200, width: null }} 
+          />
 
           <Card>
             <Form>
