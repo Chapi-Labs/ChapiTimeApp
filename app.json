@@ -4,6 +4,9 @@
     "name": "ChapiTime",
     "slug": "chapi-time",
     "icon": "src/images/app-icon.png",
+    "splash": {
+      "image": "./assets/splash.png"
+    },
     "privacy": "public"
   }
 }

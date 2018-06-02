@@ -1,5 +1,5 @@
 import React from 'react';
-import Expo from 'expo';
+import { Asset, AppLoading, Font } from 'expo';
 
 import Root from './src/native/index';
 import configureStore from './src/store/index';
@@ -12,18 +12,30 @@ export default class App extends React.Component {
     this.state = { loading: true };
   }
 
-  async componentWillMount() {
-    await Expo.Font.loadAsync({
+
+  async _cacheResourcesAsync() {
+    const images = [
+      require('./assets/splash.png'),
+      require('./src/images/ChapiTime.png'),
+    ];
+    await Font.loadAsync({
       Roboto: require('native-base/Fonts/Roboto.ttf'),
       Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
       Ionicons: require('@expo/vector-icons/fonts/Ionicons.ttf'),
     });
-    this.setState({ loading: false });
-
+    const cacheImages = images.map(image => Asset.fromModule(image).downloadAsync());
+    return Promise.all(cacheImages);
   }
+
   render() {
     if (this.state.loading) {
-      return <Expo.AppLoading />;
+      return (
+        <AppLoading
+          startAsync={this._cacheResourcesAsync}
+          onFinish={() => this.setState({ loading: false })}
+          onError={console.warn}
+        />
+      );
     }
     return <Root store={store} persistor={persistor} />;
   }

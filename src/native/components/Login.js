@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Image } from 'react-native';
-import { Container, Content, Form, Item, Label, Input, Text, Button, Card, CardItem } from 'native-base';
+import { Container, Content, Form, Item, Label, Input, Text, Button, Card } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 import Loading from './Loading';
 import Messages from './Messages';
-import { translate } from '../../i18n';
-import Header from './Header';
 import Spacer from './Spacer';
+
 const logoImage = require('../../images/ChapiTime.png');
 
 class Login extends React.Component {
@@ -15,7 +14,6 @@ class Login extends React.Component {
     member: PropTypes.shape({
       email: PropTypes.string,
     }),
-    locale: PropTypes.string,
     error: PropTypes.string,
     loading: PropTypes.bool.isRequired,
     onFormSubmit: PropTypes.func.isRequired,
@@ -23,7 +21,6 @@ class Login extends React.Component {
 
   static defaultProps = {
     error: null,
-    locale: null,
     member: {},
   }
 
@@ -52,7 +49,7 @@ class Login extends React.Component {
   }
 
   render() {
-    const { loading, error, locale } = this.props;
+    const { loading, error } = this.props;
 
     if (loading) return <Loading />;
 
@@ -73,7 +70,6 @@ class Login extends React.Component {
                   keyboardType="email-address"
                   onChangeText={v => this.handleChange('email', v)}
                 />
-                
               </Item>
               <Item stackedLabel>
                 <Label>Contraseña</Label>

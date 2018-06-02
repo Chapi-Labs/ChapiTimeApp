@@ -1,5 +1,5 @@
 import React from 'react';
-import { Scene, Tabs, Stack } from 'react-native-router-flux';
+import { Scene, Stack } from 'react-native-router-flux';
 import { Icon } from 'native-base';
 
 import DefaultProps from '../constants/navigation';
@@ -17,8 +17,6 @@ import ForgotPasswordComponent from '../components/ForgotPassword';
 import UpdateProfileContainer from '../../containers/UpdateProfile';
 import UpdateProfileComponent from '../components/UpdateProfile';
 
-import MemberContainer from '../../containers/Member';
-import ProfileComponent from '../components/Profile';
 
 const Index = (
   <Stack>
