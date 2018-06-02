@@ -8,7 +8,7 @@ import Messages from './Messages';
 import { translate } from '../../i18n';
 import Header from './Header';
 import Spacer from './Spacer';
-var firstImage = require('../../images/ChapiTime.png');
+const logoImage = require('../../images/ChapiTime.png');
 
 class Login extends React.Component {
   static propTypes = {
@@ -47,7 +47,7 @@ class Login extends React.Component {
 
   handleSubmit = () => {
     this.props.onFormSubmit(this.state)
-      .then(() => Actions.tabbar())
+      .then(() => Actions.registroHoras())
       .catch(e => console.log(`Error: ${e}`));
   }
 
@@ -61,8 +61,8 @@ class Login extends React.Component {
         <Content padder>
           {error && <Messages message={error} />}
 
-          <Image source={firstImage} style={{height: 200, width: null}}/>
-          
+          <Image source={logoImage} style={{ height: 200, width: null }} />
+
           <Card>
             <Form>
               <Item stackedLabel>
@@ -91,11 +91,9 @@ class Login extends React.Component {
             </Form>
 
             <Spacer size={10} />
-            
+
             <Button block bordered dark onPress={Actions.forgotPassword}>
-              <Text>
-                Olvidé contraseña
-              </Text>
+              <Text>Olvidé contraseña</Text>
             </Button>
           </Card>
         </Content>
