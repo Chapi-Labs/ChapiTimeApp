@@ -25,11 +25,15 @@ const Index = (
     <Scene hideNavBar>
       <Stack
         key="profile"
-        title="PROFILE"
+        title="Inicio"
         icon={() => <Icon name="contact" {...DefaultProps.icons} />}
         {...DefaultProps.navbarProps}
       >
-        <Scene key="profileHome" component={MemberContainer} Layout={ProfileComponent} />
+        <Scene
+          key="home"
+          component={LoginContainer}
+          Layout={LoginComponent}
+        />
         <Scene
           back
           key="registroHoras"
@@ -41,7 +45,7 @@ const Index = (
         <Scene
           back
           key="login"
-          title="LOGIN"
+          title="Iniciar Sesión"
           {...DefaultProps.navbarProps}
           component={LoginContainer}
           Layout={LoginComponent}
