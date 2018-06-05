@@ -18,12 +18,20 @@ const Profile = ({ member, logout }) => (
               />
             </Content>
 
-            <ListItem onPress={Actions.updateProfile} icon>
+            <ListItem onPress={Actions.registroHoras} icon>
               <Left>
-                <Icon name="person-add" />
+                <Icon name="time" />
               </Left>
               <Body>
-                <Text>Update My Profile</Text>
+                <Text>Ingresar Horas</Text>
+              </Body>
+            </ListItem>
+            <ListItem icon>
+              <Left>
+                <Icon name="list" />
+              </Left>
+              <Body>
+                <Text>Ver horas ingresadas</Text>
               </Body>
             </ListItem>
             <ListItem onPress={logout} icon>

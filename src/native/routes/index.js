@@ -16,7 +16,8 @@ import ForgotPasswordComponent from '../components/ForgotPassword';
 
 import UpdateProfileContainer from '../../containers/UpdateProfile';
 import UpdateProfileComponent from '../components/UpdateProfile';
-
+import ProfileComponent from '../components/Profile';
+import MemberContainer from '../../containers/Member';
 
 const Index = (
   <Stack>
@@ -33,20 +34,17 @@ const Index = (
           Layout={LoginComponent}
         />
         <Scene
+          key="menu"
+          component={MemberContainer}
+          Layout={ProfileComponent}
+        />
+        <Scene
           back
           key="registroHoras"
           title="REGISTRO HORAS"
           {...DefaultProps.navbarProps}
           component={RegistroHorasContainer}
           Layout={RegistroHorasComponent}
-        />
-        <Scene
-          back
-          key="login"
-          title="Iniciar Sesión"
-          {...DefaultProps.navbarProps}
-          component={LoginContainer}
-          Layout={LoginComponent}
         />
         <Scene
           back

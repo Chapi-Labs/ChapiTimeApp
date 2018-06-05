@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Actions } from 'react-native-router-flux';
 
 import { logout, getMemberData } from '../actions/member';
 
@@ -19,6 +20,9 @@ class Member extends Component {
 
   render = () => {
     const { Layout, member, memberLogout } = this.props;
+    if (!member) {
+      Actions.home();
+    }
 
     return <Layout member={member} logout={memberLogout} />;
   }
