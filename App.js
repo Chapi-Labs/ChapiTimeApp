@@ -27,7 +27,7 @@ export default class App extends React.Component {
       Ionicons: require('@expo/vector-icons/fonts/Ionicons.ttf'),
     });
     const imageAssets = cacheImages([
-      require('./assets/splash.png'),
+      require('./src/images/splash.png'),
       require('./src/images/ChapiTime.png'),
     ]);
     return Promise.all(...imageAssets);

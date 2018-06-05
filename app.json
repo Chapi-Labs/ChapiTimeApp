@@ -5,8 +5,15 @@
     "slug": "chapi-time",
     "icon": "src/images/app-icon.png",
     "splash": {
-      "image": "./assets/splash.png"
+      "image": "src/images/splash.png"
     },
-    "privacy": "public"
+    "privacy": "unlisted",
+    "ios": {
+      "bundleIdentifier": "com.chapilabs.chapitime"
+    },
+    "android": {
+      "package": "com.chapilabs.chapitime",
+      "permissions": []
+    }
   }
 }
