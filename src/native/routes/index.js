@@ -14,9 +14,7 @@ import LoginComponent from '../components/Login';
 import ForgotPasswordContainer from '../../containers/ForgotPassword';
 import ForgotPasswordComponent from '../components/ForgotPassword';
 
-import UpdateProfileContainer from '../../containers/UpdateProfile';
-import UpdateProfileComponent from '../components/UpdateProfile';
-import ProfileComponent from '../components/Profile';
+import MenuComponent from '../components/Menu';
 import MemberContainer from '../../containers/Member';
 
 const Index = (
@@ -36,7 +34,7 @@ const Index = (
         <Scene
           key="menu"
           component={MemberContainer}
-          Layout={ProfileComponent}
+          Layout={MenuComponent}
         />
         <Scene
           back
@@ -53,14 +51,6 @@ const Index = (
           {...DefaultProps.navbarProps}
           component={ForgotPasswordContainer}
           Layout={ForgotPasswordComponent}
-        />
-        <Scene
-          back
-          key="updateProfile"
-          title="UPDATE PROFILE"
-          {...DefaultProps.navbarProps}
-          component={UpdateProfileContainer}
-          Layout={UpdateProfileComponent}
         />
       </Stack>
     </Scene>

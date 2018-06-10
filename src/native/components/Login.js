@@ -28,9 +28,6 @@ class Login extends React.Component {
       email: (props.member && props.member.email) ? props.member.email : '',
       password: '',
     };
-    if (props.member.jwt) {
-      Actions.menu();
-    }
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -44,9 +41,8 @@ class Login extends React.Component {
   }
 
   handleSubmit = () => {
-    this.props
-      .onFormSubmit(this.state)
-      .then(() => Actions.menu())
+    this.props.onFormSubmit(this.state)
+      .then(() => Actions.registroHoras())
       .catch(e => console.log(`Error: ${e}`));
   }
 
@@ -86,14 +82,14 @@ class Login extends React.Component {
 
               <Spacer size={20} />
 
-              <Button block onPress={this.handleSubmit} style={{ margin: 5 }}>
+              <Button block onPress={this.handleSubmit}>
                 <Text>Iniciar</Text>
               </Button>
             </Form>
 
-            <Spacer size={20} />
+            <Spacer size={10} />
 
-            <Button block light onPress={Actions.forgotPassword} style={{ margin: 10 }}>
+            <Button block bordered dark onPress={Actions.forgotPassword}>
               <Text>Olvidé contraseña</Text>
             </Button>
           </Card>
