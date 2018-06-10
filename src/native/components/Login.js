@@ -11,6 +11,7 @@ class Login extends React.Component {
   static propTypes = {
     member: PropTypes.shape({
       email: PropTypes.string,
+      jwt: PropTypes.string,
     }),
     error: PropTypes.string,
     loading: PropTypes.bool.isRequired,
