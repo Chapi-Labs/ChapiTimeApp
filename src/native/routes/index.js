@@ -1,6 +1,7 @@
 import React from 'react';
-import { Scene, Stack } from 'react-native-router-flux';
+import { Scene, Stack, Actions } from 'react-native-router-flux';
 import { Icon } from 'native-base';
+
 
 import DefaultProps from '../constants/navigation';
 import AppConfig from '../../constants/config';
@@ -16,7 +17,6 @@ import ForgotPasswordComponent from '../components/ForgotPassword';
 
 import MenuComponent from '../components/Menu';
 import MemberContainer from '../../containers/Member';
-
 const Index = (
   <Stack>
     <Scene hideNavBar>

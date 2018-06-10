@@ -12,20 +12,25 @@ class Member extends Component {
     getMemberData: PropTypes.func.isRequired,
     member: PropTypes.shape({
       loading: PropTypes.bool.isRequired,
-      error: PropTypes.string,
-    }).isRequired,
+      error: PropTypes.string
+    }).isRequired
+  };
+
+  constructor(props) {
+    super(props);
+    const { member } = this.props;
+    if (!member.user) {
+      Actions.home();
+    }
   }
 
   componentDidMount = () => this.props.getMemberData();
 
   render = () => {
     const { Layout, member, memberLogout } = this.props;
-    if (!member) {
-      Actions.home();
-    }
 
     return <Layout member={member} logout={memberLogout} />;
-  }
+  };
 }
 
 const mapStateToProps = state => ({
