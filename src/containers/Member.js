@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Actions } from 'react-native-router-flux';
 
 import { logout, getMemberData } from '../actions/member';
 
@@ -11,8 +12,16 @@ class Member extends Component {
     getMemberData: PropTypes.func.isRequired,
     member: PropTypes.shape({
       loading: PropTypes.bool.isRequired,
-      error: PropTypes.string,
-    }).isRequired,
+      error: PropTypes.string
+    }).isRequired
+  };
+
+  constructor(props) {
+    super(props);
+    const { member } = this.props;
+    if (!member.user) {
+      Actions.home();
+    }
   }
 
   componentDidMount = () => this.props.getMemberData();
@@ -21,7 +30,7 @@ class Member extends Component {
     const { Layout, member, memberLogout } = this.props;
 
     return <Layout member={member} logout={memberLogout} />;
-  }
+  };
 }
 
 const mapStateToProps = state => ({

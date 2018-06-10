@@ -374,6 +374,9 @@ export default (variables = variable) => {
         },
       },
     },
+    '.margin-button': {
+      margin: 10,
+    },
 
     paddingVertical: variables.buttonPadding,
     // paddingHorizontal: variables.buttonPadding + 10,

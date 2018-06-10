@@ -1,3 +1,4 @@
+import { Actions } from 'react-native-router-flux';
 import Store from '../store/member';
 
 export const initialState = Store;
@@ -42,6 +43,7 @@ export default function userReducer(state = initialState, action) {
       return initialState;
     }
     case 'USER_RESET': {
+      Actions.home();
       return initialState;
     }
     default:

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Actions } from 'react-native-router-flux';
 import {
   Nav,
   Navbar,
@@ -37,7 +38,7 @@ class Header extends Component {
     this.state = { isOpen: false };
   }
 
-  onLogout = () => this.props.logout().then(() => this.props.history.push('/login'));
+  onLogout = () => this.props.logout().then(() => this.props.history.push('/home'));
 
   toggleDropDown = () => this.setState({ isOpen: !this.state.isOpen });
 

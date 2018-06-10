@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container, Content, Text, Form, Item, Label, Input, Button, Picker, Icon } from 'native-base';
+import { Container, Content, Text, Form, Label, Card, Button, Picker, Icon } from 'native-base';
 import { Actions } from 'react-native-router-flux';
-import DatePicker from 'react-native-datepicker'
+import DatePicker from 'react-native-datepicker';
 import Loading from './Loading';
 import Messages from './Messages';
 import Header from './Header';
@@ -44,11 +44,10 @@ class RegistroHoras extends React.Component {
   }
 
   handleSubmit = () => {
-    
   }
 
   handleNewActivity = () => {
-    console.log("Hola");
+    console.log('Hola');
   }
 
   render() {
@@ -71,7 +70,7 @@ class RegistroHoras extends React.Component {
               mode="dropdown"
               iosIcon={<Icon name="ios-arrow-down-outline" />}
               placeholder="Seleccione el presupuesto asignado"
-              placeholderStyle={{ color: "#bfc6ea" }}
+              placeholderStyle={{ color: '#bfc6ea' }}
               placeholderIconColor="#007aff"
               style={{ width: undefined }}
               selectedValue={this.state.presupuesto}
@@ -88,15 +87,15 @@ class RegistroHoras extends React.Component {
 
             <Label>Fecha de las horas invertidas</Label>
             <DatePicker
-              style={{width: 250}}
+              style={{ width: 250 }}
               date={this.state.fecha}
               mode="date"
               placeholder="YYYY-MM-DD"
               format="YYYY-MM-DD"
               confirmBtnText="Confirm"
               cancelBtnText="Cancel"
-              
-              onDateChange={(date) => this.handleChange('fecha', date)}
+
+              onDateChange={date => this.handleChange('fecha', date)}
             />
 
             <Spacer size={10} />
@@ -106,7 +105,7 @@ class RegistroHoras extends React.Component {
               mode="dropdown"
               iosIcon={<Icon name="ios-arrow-down-outline" />}
               placeholder="Seleccione el cliente"
-              placeholderStyle={{ color: "#bfc6ea" }}
+              placeholderStyle={{ color: '#bfc6ea' }}
               placeholderIconColor="#007aff"
               style={{ width: undefined }}
               selectedValue={this.state.cliente}
@@ -134,7 +133,7 @@ class RegistroHoras extends React.Component {
               mode="dropdown"
               iosIcon={<Icon name="ios-arrow-down-outline" />}
               placeholder="Seleccione el trabajador"
-              placeholderStyle={{ color: "#bfc6ea" }}
+              placeholderStyle={{ color: '#bfc6ea' }}
               placeholderIconColor="#007aff"
               style={{ width: undefined }}
               selectedValue={this.state.trabajador}
@@ -158,12 +157,12 @@ class RegistroHoras extends React.Component {
               <Text>Guardar y ver detalle</Text>
             </Button>
           </Form>
-          
+
           <Spacer size={20} />
 
           <Button block bordered dark>
-              <Text>Ver todas las horas ingresadas</Text>
-            </Button>
+            <Text>Ver todas las horas ingresadas</Text>
+          </Button>
         </Content>
       </Container>
     );

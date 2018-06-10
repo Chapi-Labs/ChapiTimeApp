@@ -1,6 +1,7 @@
 import React from 'react';
-import { Scene, Stack } from 'react-native-router-flux';
+import { Scene, Stack, Actions } from 'react-native-router-flux';
 import { Icon } from 'native-base';
+
 
 import DefaultProps from '../constants/navigation';
 import AppConfig from '../../constants/config';
@@ -14,10 +15,8 @@ import LoginComponent from '../components/Login';
 import ForgotPasswordContainer from '../../containers/ForgotPassword';
 import ForgotPasswordComponent from '../components/ForgotPassword';
 
-import UpdateProfileContainer from '../../containers/UpdateProfile';
-import UpdateProfileComponent from '../components/UpdateProfile';
-
-
+import MenuComponent from '../components/Menu';
+import MemberContainer from '../../containers/Member';
 const Index = (
   <Stack>
     <Scene hideNavBar>
@@ -33,6 +32,11 @@ const Index = (
           Layout={LoginComponent}
         />
         <Scene
+          key="menu"
+          component={MemberContainer}
+          Layout={MenuComponent}
+        />
+        <Scene
           back
           key="registroHoras"
           title="REGISTRO HORAS"
@@ -42,27 +46,11 @@ const Index = (
         />
         <Scene
           back
-          key="login"
-          title="Iniciar Sesión"
-          {...DefaultProps.navbarProps}
-          component={LoginContainer}
-          Layout={LoginComponent}
-        />
-        <Scene
-          back
           key="forgotPassword"
           title="FORGOT PASSWORD"
           {...DefaultProps.navbarProps}
           component={ForgotPasswordContainer}
           Layout={ForgotPasswordComponent}
-        />
-        <Scene
-          back
-          key="updateProfile"
-          title="UPDATE PROFILE"
-          {...DefaultProps.navbarProps}
-          component={UpdateProfileContainer}
-          Layout={UpdateProfileComponent}
         />
       </Stack>
     </Scene>
