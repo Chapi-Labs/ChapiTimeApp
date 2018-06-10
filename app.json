@@ -15,5 +15,7 @@
       "package": "com.chapilabs.chapitime",
       "permissions": []
     }
-  }
+  },
+  "name": "ChapiTime",
+  "displayName": "ChapiTime"
 }

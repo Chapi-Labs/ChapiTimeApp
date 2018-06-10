@@ -11,6 +11,7 @@ class Login extends React.Component {
   static propTypes = {
     member: PropTypes.shape({
       email: PropTypes.string,
+      jwt: PropTypes.string,
     }),
     error: PropTypes.string,
     loading: PropTypes.bool.isRequired,
@@ -28,6 +29,9 @@ class Login extends React.Component {
       email: (props.member && props.member.email) ? props.member.email : '',
       password: '',
     };
+    if (props.member.jwt) {
+      Actions.menu();
+    }
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -41,8 +45,9 @@ class Login extends React.Component {
   }
 
   handleSubmit = () => {
-    this.props.onFormSubmit(this.state)
-      .then(() => Actions.registroHoras())
+    this.props
+      .onFormSubmit(this.state)
+      .then(() => Actions.menu())
       .catch(e => console.log(`Error: ${e}`));
   }
 
@@ -82,14 +87,14 @@ class Login extends React.Component {
 
               <Spacer size={20} />
 
-              <Button block onPress={this.handleSubmit}>
+              <Button block onPress={this.handleSubmit} style={{ margin: 5 }}>
                 <Text>Iniciar</Text>
               </Button>
             </Form>
 
-            <Spacer size={10} />
+            <Spacer size={20} />
 
-            <Button block bordered dark onPress={Actions.forgotPassword}>
+            <Button block light onPress={Actions.forgotPassword} style={{ margin: 10 }}>
               <Text>Olvidé contraseña</Text>
             </Button>
           </Card>

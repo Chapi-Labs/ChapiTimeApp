@@ -104,9 +104,6 @@ export function updateProfile(formData) {
 /**
   * Logout
   */
-/**
-  * Logout
-  */
 export function logout() {
   return dispatch => new Promise((resolve) => {
     resolve(dispatch({ type: 'USER_RESET' }));
